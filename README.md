@@ -1,1 +1,3 @@
-Nothing here, go check out the [Wiki](https://github.com/eldstal/luftenshjaltar/wiki)!
+## [Website](http://luftenshjaltar.info)
+## [Writeups](http://luftenshjaltar.info/writeups)
+## [Wiki](https://github.com/eldstal/luftenshjaltar/wiki)
