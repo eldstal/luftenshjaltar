@@ -7,6 +7,7 @@
 * [Hints](general/hints.md)
 * [Formats](general/formats.md)
 * [Links](general/links.md)
+* [Reversing](general/reversing.md)
 
 ## Binary
 
@@ -24,8 +25,4 @@
 
 * [Escape](system/escape.md)
 * [Escalation](system/escalation.md)
-
-## Reverse
-
-* [Reversing](reverse/reversing.md)
 
