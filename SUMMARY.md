@@ -1,16 +1,32 @@
 # Table of contents
 
 * [Home](README.md)
-* [Escalation](escalation.md)
-* [Escape](escape.md)
-* [Evasion](evasion.md)
-* [Formats](formats.md)
-* [Heap](heap.md)
 * [Hints](hints.md)
-* [Javascript](javascript.md)
+* [Formats](formats.md)
 * [Links](links.md)
-* [Payloads](payloads.md)
-* [Reversing](reversing.md)
-* [Vectors](vectors.md)
-* [Web](web.md)
+
+## Binary
+
+* [Untitled](binary/untitled.md)
+* [Vectors](binary/vectors.md)
+* [Evasion](binary/evasion.md)
+* [Payloads](binary/payloads.md)
+* [Heap](binary/heap.md)
+
+## Web <a id="web-1"></a>
+
+* [Web](web-1/web.md)
+* [Javascript](web-1/javascript.md)
+* [Untitled](web-1/untitled.md)
+
+## System
+
+* [Escape](system/escape.md)
+* [Escalation](system/escalation.md)
+* [Untitled](system/untitled.md)
+
+## Reverse
+
+* [Reversing](reverse/reversing.md)
+* [Untitled](reverse/untitled.md)
 

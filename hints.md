@@ -6,19 +6,19 @@ CTF challenges are usually pretty close to minimal working examples of some spec
 
 ### User controlled `malloc()` and `free()`
 
-[Tell me more](Heap)
+[Tell me more](https://github.com/eldstal/luftenshjaltar/tree/5d862c4c7efcc4967b82b4b041e3b80cbd141c2d/Heap/README.md)
 
 There's no reason to allow this if it isn't for heap manipulation. This can also apply to the `std::` containers in C++ programs, they do some reallocation behind the scenes.
 
 ### pthreads
 
-[Tell me more](Vectors#hijack-the-stack-of-a-created-pthread)
+[Tell me more](https://github.com/eldstal/luftenshjaltar/tree/5d862c4c7efcc4967b82b4b041e3b80cbd141c2d/Vectors/README.md#hijack-the-stack-of-a-created-pthread)
 
 New threads get their stack allocated with mmap, and it may or may not be possible to double-free your way to controlling that space.
 
 ### C++ containers mixed with pointers
 
-[Tell me more](Vectors#forged-c-object)
+[Tell me more](https://github.com/eldstal/luftenshjaltar/tree/5d862c4c7efcc4967b82b4b041e3b80cbd141c2d/Vectors/README.md#forged-c-object)
 
 Containers do dynamic allocation in the background. Pointers to their internals don't stay valid.
 

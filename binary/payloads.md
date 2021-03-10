@@ -5,7 +5,7 @@
 [Tell me more](https://0xabe.io/howto/exploit/2016/03/30/Radare2-of-the-Lost-Magic-Gadget.html)  
 [Tool](https://github.com/david942j/one_gadget)
 
-libc contains code to `execve("/bin/sh")` in several places. If you know the libc in use and its loaded base address \(see [ASLR](Evasion#markdown-header-aslr)\), you can just jump there.
+libc contains code to `execve("/bin/sh")` in several places. If you know the libc in use and its loaded base address \(see [ASLR](https://github.com/eldstal/luftenshjaltar/tree/5d862c4c7efcc4967b82b4b041e3b80cbd141c2d/Evasion/README.md#markdown-header-aslr)\), you can just jump there.
 
 ## ROP techniques
 
@@ -63,7 +63,7 @@ Set `$eax` and find an `int 0x80` instruction to lift off! Arguments are in `$eb
 
 Making a system call is as easy as setting `$rax` and executing the `syscall` instruction. Arguments are in `$rdi`, `$rsi`, `$rdx`.
 
-32-bit syscalls are also available, see [Evasion](Evasion#markdown-header-32-bit-syscalls) for more info about that.
+32-bit syscalls are also available, see [Evasion](https://github.com/eldstal/luftenshjaltar/tree/5d862c4c7efcc4967b82b4b041e3b80cbd141c2d/Evasion/README.md#markdown-header-32-bit-syscalls) for more info about that.
 
 #### Lesser-known syscalls
 
