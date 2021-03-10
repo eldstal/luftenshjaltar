@@ -6,7 +6,7 @@ A couple of things to look out for: 1. Is any data parsed multiple times, using 
 
 ## Polyglots
 
-[Tell me more](https://github.com/eldstal/luftenshjaltar/tree/5d862c4c7efcc4967b82b4b041e3b80cbd141c2d/Reversing/README.md#polyglots)
+[Tell me more](https://luftenshjaltar.gitbook.io/ctf/reverse/reversing#polyglots)
 
 They can use polyglots to hide their code. We can use polyglots to bypass type checks.
 
@@ -43,7 +43,7 @@ Different XML-based formats have their own cavities. Can the schema be bypassed 
 ### XXE
 
 [Tell me more](https://blog.cobalt.io/how-to-execute-an-xml-external-entity-injection-xxe-5d5c262d5b16)  
-\[Tell me even _more_\]\([https://owasp.org/www-community/vulnerabilities/XML\_External\_Entity\_\(XXE\)\_Processing](https://owasp.org/www-community/vulnerabilities/XML_External_Entity_%28XXE%29_Processing)\)  
+[Tell me even _more_](https://owasp.org/www-community/vulnerabilities/XML_External_Entity_%28XXE%29_Processing)   
 [Work on it](https://gosecure.github.io/xxe-workshop/)
 
 Can the XML "import" external resources?
