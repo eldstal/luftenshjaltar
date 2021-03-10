@@ -43,7 +43,7 @@ Different XML-based formats have their own cavities. Can the schema be bypassed 
 ### XXE
 
 [Tell me more](https://blog.cobalt.io/how-to-execute-an-xml-external-entity-injection-xxe-5d5c262d5b16)  
-[Tell me even _more_](https://owasp.org/www-community/vulnerabilities/XML_External_Entity_%28XXE%29_Processing)   
+[Tell me even _more_](https://owasp.org/www-community/vulnerabilities/XML_External_Entity_%28XXE%29_Processing)  
 [Work on it](https://gosecure.github.io/xxe-workshop/)
 
 Can the XML "import" external resources?

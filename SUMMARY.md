@@ -4,11 +4,9 @@
 
 ## General
 
----
-
-* [Hints](hints.md)
-* [Formats](formats.md)
-* [Links](links.md)
+* [Hints](general/hints.md)
+* [Formats](general/formats.md)
+* [Links](general/links.md)
 
 ## Binary
 
@@ -17,10 +15,10 @@
 * [Payloads](binary/payloads.md)
 * [Heap](binary/heap.md)
 
-## Web <a id="web-1"></a>
+## Web
 
-* [Web](web-1/web.md)
-* [Javascript](web-1/javascript.md)
+* [Web](web/web.md)
+* [Javascript](web/javascript.md)
 
 ## System
 
