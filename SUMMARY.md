@@ -1,6 +1,11 @@
 # Table of contents
 
 * [Home](README.md)
+
+## General
+
+---
+
 * [Hints](hints.md)
 * [Formats](formats.md)
 * [Links](links.md)
