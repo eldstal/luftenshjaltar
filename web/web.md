@@ -40,8 +40,8 @@ Unvalidated user input leaks into the early parts of a HTTP response. The attack
 
 ### 40x bypassing
 
-* [byp4xx](https://github.com/lobuhi/byp4xx)
 * [4-ZERO-3](https://github.com/Dheerajmadhukar/4-ZERO-3)
+* [byp4xx](https://github.com/lobuhi/byp4xx)
 * [403fuzzer](https://github.com/intrudir/403fuzzer)
 
 ### CORS misconfiguration
