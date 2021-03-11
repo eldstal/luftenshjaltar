@@ -23,6 +23,12 @@ Windows PE can have a windows portion and a DOS portion in the same .exe. Usuall
 
 Macintosh apps can be both Intel and PPC \(and presumably ARM now\).
 
+## Code mangling
+
+[Tell me more](https://www.alchemistowl.org/pocorgtfo/pocorgtfo19.pdf) \(see article 19:04\)
+
+Instruction encodings may have some undefined/reserved bits. If these are garbled, the program may still be _valid_, but your disassembler might choke.
+
 ## Anti-debugging
 
 Several techniques exist to prevent dynamic analysis. This section needs more info on that.
