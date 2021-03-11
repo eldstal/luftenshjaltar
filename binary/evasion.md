@@ -14,6 +14,12 @@ This function is part of the GNU dynamic linker, but linked into some binaries f
 
 Use existing code instead. There's usually a `pop rdi` gadget in libc which is useful to smuggle in a first argument.
 
+#### SCOP
+
+[Tell me more](https://www.alchemistowl.org/pocorgtfo/pocorgtfo20.pdf) \(See paper 20:07\)
+
+Apparently, it's cool to reduce the amount of data hanging around in executable space.
+
 ## Stack Cookie/Canary
 
 GCC uses a stack canary which contains \(starts with\) a NULL byte.
