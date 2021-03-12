@@ -6,7 +6,7 @@ A couple of things to look out for: 1. Is any data parsed multiple times, using 
 
 ## Polyglots
 
-[Tell me more](https://luftenshjaltar.gitbook.io/ctf/reverse/reversing#polyglots)
+[Tell me more](reversing.md#polyglots)
 
 They can use polyglots to hide their code. We can use polyglots to bypass type checks.
 

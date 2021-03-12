@@ -34,13 +34,15 @@ If you're able to print anything that's on the stack, why not the cookie?
 
 If you can leak an uninitialized stack buffer, maybe there's a cookie laying around there from something else that used to have that stack space?
 
+`scanf` is a possible [vector](../general/hints.md#scanf) for this
+
 ## Pointer Guard / pointer mangling
 
 ### Use `_dl_fini` to demangle function pointers
 
 [Tell me more](https://m101.github.io/binholic/2017/05/20/notes-on-abusing-exit-handlers.html)
 
-Is the function which calls `.fini` pointers, and is sometimes registered with the exit handlers \(see above\). If glibc has pointer guard enabled, this can serve as a good _known_ function pointer to calculate the guard value.
+This is the function which calls `.fini` pointers, and is sometimes registered with the exit handlers \(see above\). If glibc has pointer guard enabled, this can serve as a good _known_ function pointer to calculate the guard value.
 
 ## Syscall filters \(seccomp\)
 
@@ -78,7 +80,7 @@ Allocate a buffer but never write to it. See what it contains!
 
 ### Format string vulnerability
 
-On x86-64, arguments 7 and onward are on the stack. Use GDB to find offsets with interesting values. You can often score a stack address \(local vars used as parameters\), a .text address \(return back into `main` for example\) and a .libc address \(return from `main` into `__libc_start_main`\) all at once!
+On x86-64, arguments 7 and onward are on the stack. Use GDB to find offsets with interesting values. You can often score a stack address \(local vars used as parameters\), a .text address \(return back into `main` for example\) and a .libc address \(return from `main` into `__libc_start_main`\) all at once! If you're out of ideas, you can also see the environment variables passed to `main` on the stack.
 
 ```text
 printf("%7$lx %380$lx\n");
