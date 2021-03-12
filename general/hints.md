@@ -38,6 +38,8 @@ In addition, the processes all share the same pre-initialized random stack cooki
 
 ### `printf()` on non-constant format
 
+[Tell me more](../binary/evasion.md#format-string-vulnerability)
+
 There's no reason to `printf(user_input)` unless you're opening up for a format string exploit. A good fmtstr will give you anything you want from the stack: Canary value, code address, stack address, possibly heap address. If you look far enough back, the stack before `main` contains environment variables!
 
 ### `scanf()`
