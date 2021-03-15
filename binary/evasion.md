@@ -36,6 +36,10 @@ If you can leak an uninitialized stack buffer, maybe there's a cookie laying aro
 
 `scanf` is a possible [vector](../general/hints.md#scanf) for this
 
+### Forking server
+
+Cookie is the same across parent and all child processes.
+
 ## Pointer Guard / pointer mangling
 
 ### Use `_dl_fini` to demangle function pointers
@@ -85,6 +89,10 @@ On x86-64, arguments 7 and onward are on the stack. Use GDB to find offsets with
 ```text
 printf("%7$lx %380$lx\n");
 ```
+
+### Forking server
+
+Parent and Child processes share the same ASLR allcations \(app and libraries are mapped identically\). If you crash the child while leaking pointers, no worries! Just spawn a new one and keep working!
 
 ### Get `mmap()` to allocate next to another segment
 
