@@ -57,7 +57,8 @@ If the program appears to use unions \(i.e. an `int` sharing the space of a `cha
 
 ### Lots of visible `rand()` output
 
-[Tool](https://github.com/ALSchwalm/foresight)
+[Tool](https://github.com/ALSchwalm/foresight) for glibc, MSVC, PHP, Java and MySQL   
+[Tool](https://github.com/tna0y/Python-random-module-cracker) for python
 
 If you can see a long sequence of pseudo-random numbers, perhaps the internal state of the generator can be reconstructed. This lets you predict upcoming numbers!
 
