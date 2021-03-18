@@ -76,7 +76,8 @@ If the seccomp filter explicitly checks architecture, 32-bit syscalls can still 
 
 ### Unknown libc version
 
-[Database](https://libc.blukat.me/) of known offsets in libc packages
+[Database](https://libc.blukat.me/) of known offsets in libc packages  
+[Another interface](https://libc.rip/) to that database
 
 So you've leaked a libc address, but you don't know the distance to `system`?
 
