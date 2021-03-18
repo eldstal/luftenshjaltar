@@ -74,6 +74,12 @@ If the seccomp filter explicitly checks architecture, 32-bit syscalls can still 
 
 ## ASLR
 
+### Unknown libc version
+
+[Database](https://libc.blukat.me/) of known offsets in libc packages
+
+So you've leaked a libc address, but you don't know the distance to `system`?
+
 ### Application pointer leak
 
 A stack or .text pointer certainly is most useful. If you can locate libc, you're ready to go.
