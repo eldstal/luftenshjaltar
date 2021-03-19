@@ -97,3 +97,7 @@ MyCMD()
 
 If you know what a binary is up to, you can set breakpoints at well-chosen locations and use a GDB script to pretty-print program state.
 
+### Custom Ghidra scripts
+
+[Snippets](https://github.com/HackOvert/GhidraSnippets) of ghidra-python
+
