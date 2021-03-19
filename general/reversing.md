@@ -99,5 +99,6 @@ If you know what a binary is up to, you can set breakpoints at well-chosen locat
 
 ### Custom Ghidra scripts
 
-[Snippets](https://github.com/HackOvert/GhidraSnippets) of ghidra-python
+[Snippets](https://github.com/HackOvert/GhidraSnippets) of ghidra-python  
+[API](https://ghidra.re/ghidra_docs/api/index.html) reference
 
