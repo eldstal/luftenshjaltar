@@ -5,7 +5,7 @@
 [Tell me more](https://www.ayrx.me/using-a-non-system-libc)  
 [Tool](https://github.com/Ayrx/reutils/blob/master/bin/change_glibc)
 
-Some challenges come with a provided `libc.so` and it is helpful to debug against that specific version rather than whatever you have in your system. The tool above patches `RUNPATH` in an ELF binary to force it to use the `libc` of your choice. Neat.
+Some challenges come with a provided `libc.so` and it is helpful to debug against that specific version rather than whatever you have in your system. The tool above patches `RUNPATH` in an ELF binary to force it to use the `libc` of your choice. It requires a copy of `ld-linux` which matches the `libc.so`. You can probably find the proper version using [libc-db](https://libc.blukat.me).
 
 ## Identifying server-side libc
 
