@@ -22,6 +22,7 @@ C++ objects with inheritances start with a `vtable` pointer. If you can control 
 ### vtables of `FILE*` objects
 
 [Tell me more](https://dhavalkapil.com/blogs/FILE-Structure-Exploitation/)  
+[Presentation](https://gsec.hitb.org/sg2018/sessions/file-structures-another-binary-exploitation-technique/) at GSEC 2018  
 [A writeup](https://ctftime.org/writeup/18765)  
 [A broken writeup](https://blog.jsec.xyz/ctf-write-up/2021/01/03/TetCTF-babyformat-write-up.html)
 
