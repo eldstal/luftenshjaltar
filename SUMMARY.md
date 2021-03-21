@@ -15,6 +15,7 @@
 * [Evasion](binary/evasion.md)
 * [Payloads](binary/payloads.md)
 * [Heap](binary/heap.md)
+* [Tools](binary/tools.md)
 
 ## Web
 
