@@ -62,6 +62,10 @@ If the program appears to use unions \(i.e. an `int` sharing the space of a `cha
 
 If you can see a long sequence of pseudo-random numbers, perhaps the internal state of the generator can be reconstructed. This lets you predict upcoming numbers!
 
+### `vm.mmap_min_addr=0`
+
+This allows `mmap` to map memory at `*NULL`! If this is set on the server, surely you can exploit a null pointer dereference?
+
 ## Web
 
 ### "Report to the admin" and similar forms

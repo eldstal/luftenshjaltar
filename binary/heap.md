@@ -6,3 +6,11 @@ Using a double-free, an arbitrary address can be introduced in the free list.
 
 TODO: Learn about tcache poisoning, which is related to this.
 
+
+
+## Attacks
+
+### \(glibc 2.29\) House of Corrosion 
+
+[Tell me more](https://github.com/CptGibbon/House-of-Corrosion)
+
