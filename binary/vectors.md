@@ -6,9 +6,7 @@ Not much else to say about that.
 
 ### Overwrite a SIGRETURN frame
 
-If you find a stack overflow in a signal handler, perhaps you can even control registers by hijacking the data stored for `sys_sigrt`?
-
-**TODO**: Verify if this actually works
+If you find a stack overflow in a signal handler, you can even control registers by hijacking the data stored for `sys_sigrt`!
 
 ## Overwrite some application function pointer
 

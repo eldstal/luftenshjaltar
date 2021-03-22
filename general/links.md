@@ -2,6 +2,12 @@
 
 A lot of these were found [here](https://github.com/collections/ctf-cybersec-resources).
 
+## Other notebooks
+
+[TechNote](https://www.lazenca.net/display/TEC/TechNote) \(Korean\)  
+[Hacktricks](https://book.hacktricks.xyz/)  
+
+
 ## Open services
 
 [Hacktricks](https://book.hacktricks.xyz/) contains a lot of information about pentesting specific protocols, as well as other gems.
