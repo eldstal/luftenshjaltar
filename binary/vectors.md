@@ -4,6 +4,12 @@
 
 Not much else to say about that.
 
+### Overwrite a SIGRETURN frame
+
+If you find a stack overflow in a signal handler, perhaps you can even control registers by hijacking the data stored for `sys_sigrt`?
+
+**TODO**: Verify if this actually works
+
 ## Overwrite some application function pointer
 
 If the code itself using func pointers, nuke them.
@@ -21,19 +27,20 @@ C++ objects with inheritances start with a `vtable` pointer. If you can control 
 
 ### vtables of `FILE*` objects
 
-[Tell me more](https://dhavalkapil.com/blogs/FILE-Structure-Exploitation/)  
-[Tell me even MORE](https://dhavalkapil.com/blogs/FILE-Structure-Exploitation/)  
-[Presentation](https://gsec.hitb.org/sg2018/sessions/file-structures-another-binary-exploitation-technique/) at GSEC 2018  
+[Documentation](https://sourceware.org/glibc/wiki/LibioVtables)  
+[Tell me more](https://github.com/mehQQ/public_writeup/tree/master/0ctf2017/engineOnline)  
 [A writeup](https://ctftime.org/writeup/18765)  
 [A broken writeup](https://blog.jsec.xyz/ctf-write-up/2021/01/03/TetCTF-babyformat-write-up.html)
 
-The opaque `FILE*` type points to an internal object which has a vtable-ish thing.
+The opaque `FILE*` type points to an internal object which has a vtable-ish thing. The simplest form of this attack is [obsolete](https://seb-sec.github.io/2020/04/29/file_exploitation.html) as of libc 2.24.
 
-### vtables of stdin/stdout/stderr
+#### Function pointers in `FILE*` objects
 
-[Tell me more](https://github.com/mehQQ/public_writeup/tree/master/0ctf2017/engineOnline)
-
-There are some function pointers here, which get called to clean up after closing the streams. This may be the same as `FILE*` above, not sure.
+[Whitepaper](https://gsec.hitb.org/materials/sg2018/WHITEPAPERS/FILE%20Structures%20-%20Another%20Binary%20Exploitation%20Technique%20-%20An-Jie%20Yang.pdf) from GSEC 2018 \([Presentation](https://gsec.hitb.org/sg2018/sessions/file-structures-another-binary-exploitation-technique/)\) \([slides](https://www.slideshare.net/AngelBoy1/play-with-file-structure-yet-another-binary-exploit-technique)\)  
+[Tell me more](https://dhavalkapil.com/blogs/FILE-Structure-Exploitation/)  
+[And more](https://seb-sec.github.io/2020/04/29/file_exploitation.html)  
+  
+These techniques are designed to bypass the vtable validation introduced in glibc 2.24. Supposedly, they give control of `rip`, `rdi`, `rsi`, and `rdx`.
 
 ### Function pointers in `__IO_STR_FIELDS`
 
