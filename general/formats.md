@@ -2,7 +2,11 @@
 
 Various data formats have their own quirks.
 
-A couple of things to look out for: 1. Is any data parsed multiple times, using different methods? 2. Is the data validated before or after unicode normalization? 3. Is any of the data part of a _turing complete configuration language_?
+A couple of things to look out for: 
+
+1. Is any data parsed multiple times, using different methods?   
+2. Is the data validated before or after unicode normalization?  
+3. Is any of the data part of a _turing complete configuration language_?
 
 ## Polyglots
 
@@ -29,6 +33,11 @@ _Yes, officer_, that's a GIF I'm uploading. Oh, but it's also PHP code.
 ```
 
 \([Source](https://www.hahwul.com/phoenix/ssrf-open-redirect)\)
+
+## Unknown encodings
+
+[Tool](https://transformations.jobertabma.nl/) to auto-detect layered text transforms  
+[Cyberchef](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwi8mN7r6sTvAhVJa8AKHcXiBlEQFjAAegQIAxAD&url=https%3A%2F%2Fgchq.github.io%2FCyberChef%2F&usg=AOvVaw3cJhXGWs_4gKkmjmhQLSNC) is good for messing around with known chains
 
 ## JSON
 
@@ -58,13 +67,28 @@ Even something this simple has multiple dialects and varieties. Mess around with
 
 Domain name filters can sometimes be bypassed by unicode normalization exploits \(see above\).
 
+[Not all languages](https://github.com/jimen0/differer) parse URLs identically.
+
 Also try these IP tricks:
 
 ## IP address
 
 [Twitter thread](https://twitter.com/dave_universetf/status/1342685822286360576)  
+[Another twitter thread](https://twitter.com/x0rz/status/928584447292858368)  
 [Blog post](https://blog.dave.tf/post/ip-addr-parsing/)  
-[Another Blog post](https://ma.ttias.be/theres-more-than-one-way-to-write-an-ip-address/)
+[Another Blog post](https://ma.ttias.be/theres-more-than-one-way-to-write-an-ip-address/)  
+[Tool](https://github.com/D4Vinci/Cuteit)
+
+```text
+$ ping 0177.1
+$ ping 134744072
+$ ping 0x8080808
+$ ping 010.0x0000008.00000010.8
+$ ping 8.0x0000000000000080808
+$ ping 192.168.36095
+$ ping 192.11046143
+$ ping 0000000001.0000000002.0000000003.000000004
+```
 
 There are many less-common IP address formats. Try them.
 
