@@ -96,3 +96,7 @@ There are many less-common IP address formats. Try them.
 
 [Insecure PDF features](https://web-in-security.blogspot.com/2021/01/insecure-features-in-pdfs.html)
 
+## Terminals
+
+If, for some reason, your payload is inspected in an actual real-life terminal \(-emulator\), you may want to try [Terminal Escape Injection](https://www.infosecmatter.com/terminal-escape-injection/). Include escapes in your payload such that a terminal will overwrite the sensitive text with benign-looking data.
+
