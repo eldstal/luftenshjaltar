@@ -5,7 +5,8 @@
 ## Enumeration
 
 [ChopChop](https://github.com/michelin/ChopChop)  
-[WhatWeb](https://github.com/urbanadventurer/WhatWeb)
+[WhatWeb](https://github.com/urbanadventurer/WhatWeb)  
+[BlindElephant](http://blindelephant.sourceforge.net/)
 
 * robots.txt
 * .htaccess
@@ -22,6 +23,8 @@
 ## JWT
 
 [Tool](https://github.com/ticarpi/jwt_tool)
+
+Try setting `alg: none` or `alg: nonE` etc. Maybe that's enough.
 
 ### Public key mixup
 
@@ -97,14 +100,26 @@ URL-encode some part of your naughty string. Maybe the filter is applied before 
 
 ## Exposed SCM data
 
-* [ayfabtu](https://github.com/tautology0/ayfabtu) supports svn, mercurial and git.
-* [GitTools](https://github.com/internetwache/GitTools)
-* [gitjacker](https://github.com/liamg/gitjacker)
-* [git-dumper](https://github.com/arthaud/git-dumper)
+[ayfabtu](https://github.com/tautology0/ayfabtu) supports svn, mercurial and git.  
+[DVCS Ripper](https://github.com/kost/dvcs-ripper) \(svm mercurial, git, BZR\)  
+[GitTools](https://github.com/internetwache/GitTools)  
+[gitjacker](https://github.com/liamg/gitjacker)  
+[git-dumper](https://github.com/arthaud/git-dumper)
 
 ## CSP
 
 [Evasion techniques](https://cspscanner.com/csp-bypasses)
+
+## LFI
+
+[fimap](https://github.com/kurobeats/fimap)  
+[liffy](https://github.com/hvqzao/liffy)  
+[Kadimus](https://github.com/P0cL4bs/Kadimus)  
+[Kadabra](https://github.com/D35m0nd142/Kadabra)
+
+Try to use it to get the source of the vulnerable script. That will show you any filtering etc.
+
+PHP has all kinds of [funky pseudo-file protocols](https://book.hacktricks.xyz/pentesting-web/file-inclusion#lfi-rfi-using-php-wrappers), and these are valid wherever file paths are. fimap and liffy support some of these tricks.
 
 ## SSRF
 

@@ -4,7 +4,7 @@ Various data formats have their own quirks.
 
 A couple of things to look out for: 
 
-1. Is any data parsed multiple times, using different methods?   
+1. Is any data parsed [multiple times, using different methods](https://about.gitlab.com/blog/2020/03/30/how-to-exploit-parser-differentials/)?   
 2. Is the data validated before or after unicode normalization?  
 3. Is any of the data part of a _turing complete configuration language_?
 
@@ -20,7 +20,8 @@ _Yes, officer_, that's a GIF I'm uploading. Oh, but it's also PHP code.
 
 ### Normalization
 
-[Tool](https://github.com/JesseClarkND/abnormalizer)
+[Tool](https://github.com/JesseClarkND/abnormalizer)  
+[Tool](https://spaceraccoon.github.io/unicollider/)
 
 ```text
 ① ② ③ ④ ⑤ ⑥ ⑦ ⑧ ⑨ ⑩ ⑪ ⑫ ⑬ ⑭ ⑮ ⑯ ⑰ ⑱ ⑲ ⑳ 
@@ -53,6 +54,8 @@ Different XML-based formats have their own cavities. Can the schema be bypassed 
 
 [Tell me more](https://blog.cobalt.io/how-to-execute-an-xml-external-entity-injection-xxe-5d5c262d5b16)  
 [Tell me even _more_](https://owasp.org/www-community/vulnerabilities/XML_External_Entity_%28XXE%29_Processing)  
+__[You guessed it](https://www.netsparker.com/blog/web-security/xxe-xml-external-entity-attacks/)  
+[Tool](https://github.com/luisfontes19/xxexploiter)  
 [Work on it](https://gosecure.github.io/xxe-workshop/)
 
 Can the XML "import" external resources?

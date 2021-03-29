@@ -4,8 +4,9 @@
 
 ### Character restrictions
 
-* [Only \(\)+\[\]!](http://www.jsfuck.com/)  
-* [Only +\[\]{}!$\`](https://portswigger.net/research/executing-non-alphanumeric-javascript-without-parenthesis)
+[Only \(\)+\[\]!](http://www.jsfuck.com/)    
+[Only +\[\]{}!$\`](https://portswigger.net/research/executing-non-alphanumeric-javascript-without-parenthesis)  
+[No parentheses](https://portswigger.net/research/javascript-without-parentheses-using-dommatrix)
 
 ### Unicode shenanigans
 
