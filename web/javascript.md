@@ -6,7 +6,8 @@
 
 [Only \(\)+\[\]!](http://www.jsfuck.com/)    
 [Only +\[\]{}!$\`](https://portswigger.net/research/executing-non-alphanumeric-javascript-without-parenthesis)  
-[No parentheses](https://portswigger.net/research/javascript-without-parentheses-using-dommatrix)
+[No parentheses](https://portswigger.net/research/javascript-without-parentheses-using-dommatrix)  
+[Cool encoder](https://xssor.io/)
 
 ### Unicode shenanigans
 

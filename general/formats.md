@@ -16,10 +16,22 @@ They can use polyglots to hide their code. We can use polyglots to bypass type c
 
 _Yes, officer_, that's a GIF I'm uploading. Oh, but it's also PHP code.
 
+## Regular Expressions
+
+#### Ranges
+
+`[A-z]` includes more than just letters.
+
+#### URL filtering
+
+[Example](https://twitter.com/YShahinzadeh/status/1250889458641141760)  
+If a regex is used to split the host, perhaps URL parsing can be fooled. Real parsers take everything before an `@` as a username. 
+
 ## Unicode
 
 ### Normalization
 
+[Tell me more](https://jlajara.gitlab.io/web/2020/02/19/Bypass_WAF_Unicode.html)  
 [Tool](https://github.com/JesseClarkND/abnormalizer)  
 [Tool](https://spaceraccoon.github.io/unicollider/)
 

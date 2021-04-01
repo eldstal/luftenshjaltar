@@ -67,7 +67,8 @@ Unvalidated user input leaks into the early parts of a HTTP response. The attack
 ### Bypassing
 
 [A Methodology](https://blog.isec.pl/waf-evasion-techniques/)  
-[Some tips](https://labs.secforce.com/posts/bypassing-wafs-web-application-filters/)
+[Some tips](https://labs.secforce.com/posts/bypassing-wafs-web-application-filters/)  
+[Unicode shenanigans](https://jlajara.gitlab.io/web/2020/02/19/Bypass_WAF_Unicode.html), because _of course_
 
 #### **Mess with the HTTP request**
 
