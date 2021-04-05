@@ -11,6 +11,7 @@
 
 ## Binary
 
+* [Basics](binary/basics.md)
 * [Vectors](binary/vectors.md)
 * [Evasion](binary/evasion.md)
 * [Payloads](binary/payloads.md)
