@@ -8,6 +8,10 @@ Not much else to say about that.
 
 If you find a stack overflow in a signal handler, you can even control registers by hijacking the data stored for `sys_sigrt`!
 
+## Pivot the stack
+
+If you can overwrite a stored `rbp` to point to a buffer you control, you own the stack.
+
 ## Overwrite some application function pointer
 
 If the code itself using func pointers, nuke them.
