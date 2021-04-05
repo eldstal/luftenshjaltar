@@ -133,6 +133,12 @@ PHP has all kinds of [funky pseudo-file protocols](https://book.hacktricks.xyz/p
 
 Server Side Template Injection
 
+## SQLi
+
+### SQLite
+
+Use a NULL byte to terminate the query and get rid of stuff you can't comment out. Neat.
+
 ## XSS
 
 [Event handlers by tag](https://portswigger.net/web-security/cross-site-scripting/cheat-sheet)  

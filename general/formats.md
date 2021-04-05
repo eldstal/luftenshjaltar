@@ -34,6 +34,7 @@ If a regex is used to split the host, perhaps URL parsing can be fooled. Real pa
 ### Normalization
 
 [Tell me more](https://jlajara.gitlab.io/web/2020/02/19/Bypass_WAF_Unicode.html)  
+[List](https://appcheck-ng.com/wp-content/uploads/unicode_normalization.html)  
 [Tool](https://github.com/JesseClarkND/abnormalizer)  
 [Tool](https://spaceraccoon.github.io/unicollider/)
 
