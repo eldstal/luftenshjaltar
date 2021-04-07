@@ -85,7 +85,7 @@ import os
 class MyCMD (gdb.Command):
   """Implements the run_my_stuff command, which will be available at the gdb prompt"""
 
-  def__init__(self):
+  def __init__(self):
     super(MyCMD, self).__init__("run_my_stuff", gdb.COMMAND_USER)
 
   def invoke(self, arg, from_tty):
