@@ -97,6 +97,16 @@ On x86-64, arguments 7 and onward are on the stack. Use GDB to find offsets with
 printf("%7$lx %380$lx\n");
 ```
 
+### Overwrite only a partial address
+
+If your write primitive is limited, perhaps you can get away with only slightly overwriting an address in `.got` or the like. Little-endian can be a blessing.
+
+#### Massage ASLR first
+
+[Example](https://ctftime.org/writeup/27030)  
+  
+Typically, the base of `libc` is not only random, but the lowest 12 bits are uneven. If you have a complete libc leak but a write primitive limited to a single byte, you might try to restart the application until you have a nice predictable third nibble.
+
 ### Forking server
 
 Parent and Child processes share the same ASLR allcations \(app and libraries are mapped identically\). If you crash the child while leaking pointers, no worries! Just spawn a new one and keep working!
