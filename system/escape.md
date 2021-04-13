@@ -87,3 +87,7 @@ Any callable in the target's namespace can be called with \(almost\) arbitrary p
 
 [view-source:](https://twitter.com/HusseiN98D/status/1325464364569276417) isn't necessarily blocked like `file://` is. Perhaps the app even uses its own [custom URI scheme](https://twitter.com/zer0pwn/status/1325581291060826112)?
 
+## Javascript
+
+[Sandboxes](https://d0nut.medium.com/why-building-a-sandbox-in-pure-javascript-is-a-fools-errand-d425b77b2899)
+

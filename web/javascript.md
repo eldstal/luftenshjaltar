@@ -2,6 +2,8 @@
 
 ## Javascript
 
+[Something on sandboxes](https://d0nut.medium.com/why-building-a-sandbox-in-pure-javascript-is-a-fools-errand-d425b77b2899)
+
 ### Character restrictions
 
 [Only \(\)+\[\]!](http://www.jsfuck.com/)    

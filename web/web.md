@@ -20,6 +20,13 @@
   * Provided but **invalid** parameters?
 * Does the application use any [binary libraries](https://blog.silentsignal.eu/2020/04/20/uninitialized-memory-disclosures-in-web-applications/)?
 
+## Probing payloads
+
+```text
+<img src=x onerror=alert(1)> {{1*3}} ${1*3} test
+‘“></script>{{2*2}}${2*2}
+```
+
 ## JWT
 
 [Tool](https://github.com/ticarpi/jwt_tool)
