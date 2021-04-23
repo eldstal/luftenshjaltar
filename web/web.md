@@ -6,7 +6,8 @@
 
 [ChopChop](https://github.com/michelin/ChopChop)  
 [WhatWeb](https://github.com/urbanadventurer/WhatWeb)  
-[BlindElephant](http://blindelephant.sourceforge.net/)
+[BlindElephant](http://blindelephant.sourceforge.net/)  
+[List of interesting URLs](https://github.com/random-robbie/bruteforce-lists)
 
 * robots.txt
 * .htaccess
