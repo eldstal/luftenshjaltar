@@ -88,6 +88,12 @@ Domain name filters can sometimes be bypassed by unicode normalization exploits 
 
 [Not all languages](https://github.com/jimen0/differer) parse URLs identically.
 
+Some platforms \(NodeJS\) are more permissive about URL formats:
+
+```text
+http:\domain.com
+```
+
 Also try these IP tricks:
 
 ## IP address
