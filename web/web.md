@@ -92,8 +92,8 @@ Try a `POST` instead of a `GET`. If the filtering is applied to the requested pa
 [Tell me more](https://delta.navisec.io/a-pentesters-guide-part-5-unmasking-wafs-and-finding-the-source/)  
 [DNS history](https://securitytrails.com/domain/0x00sec.org/dns)  
 [SSL history](https://crt.sh)  
-[Subdomains](http://dnsdumpster.com/)
-
+[Subdomains](http://dnsdumpster.com/)  
+[CloudFail](https://github.com/m0rtem/CloudFail) for cloudflare-protected sites  
 [Lilly](https://github.com/Dheerajmadhukar/Lilly) \(requires a shodan API key\)
 
 Maybe `dev.target.com` points to the actual server behind the WAF? Maybe `target.com` _used to_ point straight to the server, and the server is still the same?
