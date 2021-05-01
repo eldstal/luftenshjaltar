@@ -6,6 +6,7 @@ A lot of these were found [here](https://github.com/collections/ctf-cybersec-res
 
 [TechNote](https://www.lazenca.net/display/TEC/TechNote) \(Korean\)  
 [Hacktricks](https://book.hacktricks.xyz/)  
+[Kathan19](https://kathan19.gitbook.io/howtohunt/)  
 
 
 ## Open services
