@@ -11,6 +11,10 @@ Here are some tools to identify stuff:
 * [binwalk](https://github.com/ReFirmLabs/binwalk)
 * [Decodify](https://github.com/s0md3v/Decodify) auto-decodes strings using various methods
 
+## Windows Tools
+
+[bytepointer](http://bytepointer.com/tools/index.htm) has a bunch of small utilities
+
 ## Polyglots
 
 JAR is zip and zip can be combined with all kinds of stuff.

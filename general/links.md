@@ -33,3 +33,7 @@ Anywhere user input is accepted, there's a possibility for format trickery.
 
 [m0nad](https://github.com/m0nad/awesome-privilege-escalation)
 
+## Windows and DOS
+
+[Docs and such](http://bytepointer.com/resources/index.htm) for various microsoft platforms
+
