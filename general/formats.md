@@ -10,7 +10,8 @@ A couple of things to look out for:
 
 ## Polyglots
 
-[Tell me more](reversing.md#polyglots)
+[Tell me more](reversing.md#polyglots)  
+[Mitra](https://github.com/corkami/mitra)
 
 They can use polyglots to hide their code. We can use polyglots to bypass type checks.
 

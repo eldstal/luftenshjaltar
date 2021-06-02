@@ -7,7 +7,7 @@ Here are some tools to identify stuff:
 * [Detect it Easy](https://github.com/horsicq/Detect-It-Easy)
 * [TrID](https://mark0.net/soft-trid-e.html)
 * [Polyfile](https://github.com/trailofbits/polyfile)
-* `file`
+* `file --keep-going`
 * [binwalk](https://github.com/ReFirmLabs/binwalk)
 * [Decodify](https://github.com/s0md3v/Decodify) auto-decodes strings using various methods
 
@@ -20,6 +20,8 @@ Here are some tools to identify stuff:
 JAR is zip and zip can be combined with all kinds of stuff.
 
 [Polyfile](https://github.com/trailofbits/polyfile) can help map out files like this. Beware zip bombs, PDF bombs and the like, they can make output _explode_.
+
+[Mitra](https://github.com/corkami/mitra) can generate 2-polyglots between a large number of formats
 
 ## Fat binaries
 
