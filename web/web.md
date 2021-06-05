@@ -14,6 +14,12 @@
 * .htaccess
 * API endpoints called by javascript/etc
 
+## Domains
+
+[DNS Dumpster](https://dnsdumpster.com/)  
+[DNS History](https://completedns.com/dns-history/)  
+[Domains sharing IP](https://networksdb.io/)
+
 ## Sneaky techniky
 
 * Does the server support `HTTP PUT`?
