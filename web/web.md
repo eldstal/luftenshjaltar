@@ -7,6 +7,7 @@
 [ChopChop](https://github.com/michelin/ChopChop)  
 [WhatWeb](https://github.com/urbanadventurer/WhatWeb)  
 [BlindElephant](http://blindelephant.sourceforge.net/)  
+[FeroxBuster](https://github.com/epi052/feroxbuster)  
 [List of interesting URLs](https://github.com/random-robbie/bruteforce-lists)  
 [Another sweet set of lists](https://github.com/danielmiessler/SecLists/tree/master/Discovery/Web-Content)
 
@@ -27,6 +28,8 @@
   * Missing auth parameters?
   * Provided but **invalid** parameters?
 * Does the application use any [binary libraries](https://blog.silentsignal.eu/2020/04/20/uninitialized-memory-disclosures-in-web-applications/)?
+* What happens if you remove the `Host` header?
+* What other domains are hosted at the same IP?
 
 ## Probing payloads
 
