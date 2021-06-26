@@ -55,7 +55,8 @@ If a regex is used to split the host, perhaps URL parsing can be fooled. Real pa
 ## Unknown encodings
 
 [Tool](https://transformations.jobertabma.nl/) to auto-detect layered text transforms  
-[Cyberchef](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwi8mN7r6sTvAhVJa8AKHcXiBlEQFjAAegQIAxAD&url=https%3A%2F%2Fgchq.github.io%2FCyberChef%2F&usg=AOvVaw3cJhXGWs_4gKkmjmhQLSNC) is good for messing around with known chains
+[Cyberchef](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwi8mN7r6sTvAhVJa8AKHcXiBlEQFjAAegQIAxAD&url=https%3A%2F%2Fgchq.github.io%2FCyberChef%2F&usg=AOvVaw3cJhXGWs_4gKkmjmhQLSNC) is good for messing around with known chains[  
+Haiti](https://github.com/noraj/haiti) identifies hash types
 
 ## JSON
 
