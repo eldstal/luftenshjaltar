@@ -11,6 +11,8 @@
 [No parentheses](https://portswigger.net/research/javascript-without-parentheses-using-dommatrix)  
 [Cool encoder](https://xssor.io/)
 
+If your injected code is HTML-escaped, you can use backticks \` to get strings through. Just be aware that these strings are templates, and will be interpolated.
+
 ### Unicode shenanigans
 
 [Of course](https://portswigger.net/research/escaping-javascript-sandboxes-with-parsing-issues)
