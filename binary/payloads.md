@@ -7,6 +7,11 @@
 
 libc contains code to `execve("/bin/sh")` in several places. If you know the libc in use and its loaded base address \(see [ASLR](https://github.com/eldstal/luftenshjaltar/tree/5d862c4c7efcc4967b82b4b041e3b80cbd141c2d/Evasion/README.md#markdown-header-aslr)\), you can just jump there.
 
+## Reverse shells
+
+[Reverse Shell Generator](https://weibell.github.io/reverse-shell-generator/)
+
+
 ## ROP techniques
 
 [Exercises](https://ropemporium.com/)
@@ -45,6 +50,14 @@ The top of `.plt` is a stub which calls `dl-resolve`, and takes an index into th
 
 **Danger** [Stack alignment](https://ropemporium.com/guide.html#Common%20pitfalls) is an issue, and `system()` relies on the stack being 16-byte aligned when it's called. If your chain doesn't work, try adding a `ret;` gadget to it for a different alignment.
 
+## Sigreturn Oriented Programming
+
+[Tell me more](https://translate.google.com/translate?sl=auto&tl=en&u=https://firmianay.gitbooks.io/ctf-all-in-one/content/doc/6.1.4_pwn_backdoorctf2017_fun_signals.html)  
+[Tool](https://docs.pwntools.com/en/stable/rop/srop.html)
+
+If you can push to the stack and execute syscall 15, you can control all the registers at once. Neat.
+
+
 ## Syscall cobbling
 
 [Linux syscalls](https://syscalls.w3challs.com/)
@@ -77,15 +90,4 @@ If there's a blocklist, here are some less obvious tricks:
 The `ax` registers which control syscall number also happen to be the return value registers in the SystemV calling convention. If you control a `read()` before your ROP chain, for example, it will return the number of bytes read. Send it 11 bytes and you've lined yourself up for `execve()`!
 
 Alternatively, check out the Sigreturn syscall below to control _all_ the registers!
-
-## Sigreturn Oriented Programming
-
-[Tell me more](https://translate.google.com/translate?sl=auto&tl=en&u=https://firmianay.gitbooks.io/ctf-all-in-one/content/doc/6.1.4_pwn_backdoorctf2017_fun_signals.html)  
-[Tool](https://docs.pwntools.com/en/stable/rop/srop.html)
-
-If you can push to the stack and execute syscall 15, you can control all the registers at once. Neat.
-
-## Reverse shells
-
-[Reverse Shell Generator](https://weibell.github.io/reverse-shell-generator/)
 

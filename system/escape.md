@@ -26,6 +26,25 @@ fl{a,A}g.txt
 fl[a-z]g.txt
 ```
 
+## Docker
+
+* [deepce](https://github.com/stealthcopter/deepce/), a vulnerability scanner.  
+* [grype](https://github.com/anchore/grype), a vulnerability scanner.  
+* [WhaleScan](https://github.com/nccgroup/whalescan), scans windows containers.
+
+## Electron
+
+[Tell me more](https://github.com/doyensec/awesome-electronjs-hacking)
+
+[view-source:](https://twitter.com/HusseiN98D/status/1325464364569276417) isn't necessarily blocked like `file://` is.
+
+Perhaps the app even uses its own [custom URI scheme](https://twitter.com/zer0pwn/status/1325581291060826112)?
+
+## Javascript
+
+[Sandboxes](https://d0nut.medium.com/why-building-a-sandbox-in-pure-javascript-is-a-fools-errand-d425b77b2899)
+
+
 ## Python
 
 [Tell me more](https://book.hacktricks.xyz/misc/basic-python/bypass-python-sandboxes)
@@ -74,20 +93,4 @@ pickled = pickle.dumps(a, 0)
 ```
 
 Any callable in the target's namespace can be called with \(almost\) arbitrary parameters by pickling a class which implements `__reduce__`. Return the callable and a tuple of arguments. See above for a technique to chain as well.
-
-## Docker
-
-* [deepce](https://github.com/stealthcopter/deepce/), a vulnerability scanner.  
-* [grype](https://github.com/anchore/grype), a vulnerability scanner.  
-* [WhaleScan](https://github.com/nccgroup/whalescan), scans windows containers.
-
-## Electron
-
-[Tell me more](https://github.com/doyensec/awesome-electronjs-hacking)
-
-[view-source:](https://twitter.com/HusseiN98D/status/1325464364569276417) isn't necessarily blocked like `file://` is. Perhaps the app even uses its own [custom URI scheme](https://twitter.com/zer0pwn/status/1325581291060826112)?
-
-## Javascript
-
-[Sandboxes](https://d0nut.medium.com/why-building-a-sandbox-in-pure-javascript-is-a-fools-errand-d425b77b2899)
 

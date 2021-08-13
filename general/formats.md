@@ -8,95 +8,9 @@ A couple of things to look out for:
 2. Is the data validated before or after unicode normalization?  
 3. Is any of the data part of a _turing complete configuration language_?
 
-## Polyglots
-
-[Tell me more](reversing.md#polyglots)  
-[Mitra](https://github.com/corkami/mitra)
-
-They can use polyglots to hide their code. We can use polyglots to bypass type checks.
-
-_Yes, officer_, that's a GIF I'm uploading. Oh, but it's also PHP code.
-
-## Regular Expressions
-
-[Tool](https://regex101.com/)
-
-#### Ranges
-
-`[A-z]` includes more than just letters.
-
-#### URL filtering
-
-[Example](https://twitter.com/YShahinzadeh/status/1250889458641141760)  
-If a regex is used to split the host, perhaps URL parsing can be fooled. Real parsers take everything before an `@` as a username. 
-
-## Unicode
-
-### Normalization
-
-[Tell me more](https://jlajara.gitlab.io/web/2020/02/19/Bypass_WAF_Unicode.html)  
-[List](https://appcheck-ng.com/wp-content/uploads/unicode_normalization.html)  
-[Tool](https://github.com/eldstal/strinvader)  
-[Tool](https://github.com/JesseClarkND/abnormalizer)  
-[Tool](https://spaceraccoon.github.io/unicollider/)
-
-```text
-① ② ③ ④ ⑤ ⑥ ⑦ ⑧ ⑨ ⑩ ⑪ ⑫ ⑬ ⑭ ⑮ ⑯ ⑰ ⑱ ⑲ ⑳ 
-⑴ ⑵ ⑶ ⑷ ⑸ ⑹ ⑺ ⑻ ⑼ ⑽ ⑾ ⑿ ⒀ ⒁ ⒂ ⒃ ⒄ ⒅ ⒆ ⒇ 
-⒈ ⒉ ⒊ ⒋ ⒌ ⒍ ⒎ ⒏ ⒐ ⒑ ⒒ ⒓ ⒔ ⒕ ⒖ ⒗ ⒘ ⒙ ⒚ ⒛ 
-⒜ ⒝ ⒞ ⒟ ⒠ ⒡ ⒢ ⒣ ⒤ ⒥ ⒦ ⒧ ⒨ ⒩ ⒪ ⒫ ⒬ ⒭ ⒮ ⒯ ⒰ ⒱ ⒲ ⒳ ⒴ ⒵ 
-Ⓐ Ⓑ Ⓒ Ⓓ Ⓔ Ⓕ Ⓖ Ⓗ Ⓘ Ⓙ Ⓚ Ⓛ Ⓜ Ⓝ Ⓞ Ⓟ Ⓠ Ⓡ Ⓢ Ⓣ Ⓤ Ⓥ Ⓦ Ⓧ Ⓨ Ⓩ 
-ⓐ ⓑ ⓒ ⓓ ⓔ ⓕ ⓖ ⓗ ⓘ ⓙ ⓚ ⓛ ⓜ ⓝ ⓞ ⓟ ⓠ ⓡ ⓢ ⓣ ⓤ ⓥ ⓦ ⓧ ⓨ ⓩ 
-⓪ ⓫ ⓬ ⓭ ⓮ ⓯ ⓰ ⓱ ⓲ ⓳ ⓴ ⓵ ⓶ ⓷ ⓸ ⓹ ⓺ ⓻ ⓼ ⓽ ⓾ ⓿
-```
-
-\([Source](https://www.hahwul.com/phoenix/ssrf-open-redirect)\)
-
-## Unknown encodings
-
-[Tool](https://transformations.jobertabma.nl/) to auto-detect layered text transforms  
-[Cyberchef](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=&cad=rja&uact=8&ved=2ahUKEwi8mN7r6sTvAhVJa8AKHcXiBlEQFjAAegQIAxAD&url=https%3A%2F%2Fgchq.github.io%2FCyberChef%2F&usg=AOvVaw3cJhXGWs_4gKkmjmhQLSNC) is good for messing around with known chains[  
-Haiti](https://github.com/noraj/haiti) identifies hash types
-
-## JSON
-
-[Tell me more](https://labs.bishopfox.com/tech-blog/an-exploration-of-json-interoperability-vulnerabilities)
-
-Different parsers deal with special cases differently. Perhaps if an app uses one library for parsing and a different one for parsing+validation, you can bypass validation by duplicating keys?
-
-## XML
-
-Different XML-based formats have their own cavities. Can the schema be bypassed to include dangerous elements?
-
-### XXE
-
-[Tell me more](https://blog.cobalt.io/how-to-execute-an-xml-external-entity-injection-xxe-5d5c262d5b16)  
-[Tell me even _more_](https://owasp.org/www-community/vulnerabilities/XML_External_Entity_%28XXE%29_Processing)  
-__[You guessed it](https://www.netsparker.com/blog/web-security/xxe-xml-external-entity-attacks/)  
-[Tool](https://github.com/luisfontes19/xxexploiter)  
-[Work on it](https://gosecure.github.io/xxe-workshop/)
-
-Can the XML "import" external resources?
-
 ## CSV
 
 Even something this simple has multiple dialects and varieties. Mess around with whitespace and separators and quotes.
-
-## URL
-
-[Domain names](https://twitter.com/s0md3v/status/1354733673069694978?s=19) can't contain underscores, except that subdomains certainly can. Neat.
-
-Domain name filters can sometimes be bypassed by unicode normalization exploits \(see above\).
-
-[Not all languages](https://github.com/jimen0/differer) parse URLs identically.
-
-Some platforms \(NodeJS\) are more permissive about URL formats:
-
-```text
-http:\domain.com
-```
-
-Also try these IP tricks:
 
 ## IP address
 
@@ -119,11 +33,100 @@ $ ping 0000000001.0000000002.0000000003.000000004
 
 There are many less-common IP address formats. Try them.
 
+
+## JSON
+
+[Tell me more](https://labs.bishopfox.com/tech-blog/an-exploration-of-json-interoperability-vulnerabilities)
+
+Different parsers deal with special cases differently. Perhaps if an app uses one library for parsing and a different one for parsing+validation, you can bypass validation by duplicating keys?
+
 ## PDF
 
 [Insecure PDF features](https://web-in-security.blogspot.com/2021/01/insecure-features-in-pdfs.html)
 
+## Polyglots
+
+[Tell me more](reversing.md#polyglots)  
+[Mitra](https://github.com/corkami/mitra)
+
+They can use polyglots to hide their code. We can use polyglots to bypass type checks.
+
+_Yes, officer_, that's a GIF I'm uploading. Oh, but it's also PHP code.
+
+## Regular Expressions
+
+[Tool](https://regex101.com/)
+
+#### Ranges
+
+`[A-z]` includes more than just letters.
+
 ## Terminals
 
 If, for some reason, your payload is inspected in an actual real-life terminal \(-emulator\), you may want to try [Terminal Escape Injection](https://www.infosecmatter.com/terminal-escape-injection/). Include escapes in your payload such that a terminal will overwrite the sensitive text with benign-looking data.
+
+
+#### URL filtering
+
+[Example](https://twitter.com/YShahinzadeh/status/1250889458641141760)
+If a regex is used to split the host, perhaps URL parsing can be fooled. Real parsers take everything before an `@` as a username.
+
+## Unicode
+
+### Normalization
+
+[Tell me more](https://jlajara.gitlab.io/web/2020/02/19/Bypass_WAF_Unicode.html)
+[List](https://appcheck-ng.com/wp-content/uploads/unicode_normalization.html)
+[Tool](https://github.com/eldstal/strinvader)
+[Tool](https://github.com/JesseClarkND/abnormalizer)
+[Tool](https://spaceraccoon.github.io/unicollider/)
+
+```text
+① ② ③ ④ ⑤ ⑥ ⑦ ⑧ ⑨ ⑩ ⑪ ⑫ ⑬ ⑭ ⑮ ⑯ ⑰ ⑱ ⑲ ⑳ 
+⑴ ⑵ ⑶ ⑷ ⑸ ⑹ ⑺ ⑻ ⑼ ⑽ ⑾ ⑿ ⒀ ⒁ ⒂ ⒃ ⒄ ⒅ ⒆ ⒇ 
+⒈ ⒉ ⒊ ⒋ ⒌ ⒍ ⒎ ⒏ ⒐ ⒑ ⒒ ⒓ ⒔ ⒕ ⒖ ⒗ ⒘ ⒙ ⒚ ⒛ 
+⒜ ⒝ ⒞ ⒟ ⒠ ⒡ ⒢ ⒣ ⒤ ⒥ ⒦ ⒧ ⒨ ⒩ ⒪ ⒫ ⒬ ⒭ ⒮ ⒯ ⒰ ⒱ ⒲ ⒳ ⒴ ⒵ 
+Ⓐ Ⓑ Ⓒ Ⓓ Ⓔ Ⓕ Ⓖ Ⓗ Ⓘ Ⓙ Ⓚ Ⓛ Ⓜ Ⓝ Ⓞ Ⓟ Ⓠ Ⓡ Ⓢ Ⓣ Ⓤ Ⓥ Ⓦ Ⓧ Ⓨ Ⓩ 
+ⓐ ⓑ ⓒ ⓓ ⓔ ⓕ ⓖ ⓗ ⓘ ⓙ ⓚ ⓛ ⓜ ⓝ ⓞ ⓟ ⓠ ⓡ ⓢ ⓣ ⓤ ⓥ ⓦ ⓧ ⓨ ⓩ 
+⓪ ⓫ ⓬ ⓭ ⓮ ⓯ ⓰ ⓱ ⓲ ⓳ ⓴ ⓵ ⓶ ⓷ ⓸ ⓹ ⓺ ⓻ ⓼ ⓽ ⓾ ⓿
+```
+
+\([Source](https://www.hahwul.com/phoenix/ssrf-open-redirect)\)
+
+## Unknown encodings
+
+[Tool](https://transformations.jobertabma.nl/) to auto-detect layered text transforms
+[Cyberchef](https://gchq.github.io/CyberChef/) is good for messing around with known chains
+[Haiti](https://github.com/noraj/haiti) identifies hash types
+
+## URL
+
+[Domain names](https://twitter.com/s0md3v/status/1354733673069694978?s=19) can't contain underscores, except that subdomains certainly can. Neat.
+
+Domain name filters can sometimes be bypassed by unicode normalization exploits \(see above\).
+
+[Not all languages](https://github.com/jimen0/differer) parse URLs identically.
+
+Some platforms \(NodeJS\) are more permissive about URL formats:
+
+```text
+http:\domain.com
+```
+
+Also try the tricks listed under IP address
+
+
+## XML
+
+Different XML-based formats have their own cavities. Can the schema be bypassed to include dangerous elements?
+
+### XXE
+
+[Tell me more](https://blog.cobalt.io/how-to-execute-an-xml-external-entity-injection-xxe-5d5c262d5b16)
+[Tell me even _more_](https://owasp.org/www-community/vulnerabilities/XML_External_Entity_%28XXE%29_Processing)
+[_You guessed it_](https://www.netsparker.com/blog/web-security/xxe-xml-external-entity-attacks/)  
+[Tool](https://github.com/luisfontes19/xxexploiter)  
+[Work on it](https://gosecure.github.io/xxe-workshop/)
+
+Can the XML "import" external resources?
 
