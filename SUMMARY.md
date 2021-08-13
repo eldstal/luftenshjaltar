@@ -29,3 +29,7 @@
 * [Escape](system/escape.md)
 * [Escalation](system/escalation.md)
 
+## Crypto
+
+* [Hints](crypto/hints.md)
+
