@@ -2,7 +2,7 @@
 
 Various data formats have their own quirks.
 
-A couple of things to look out for: 
+A couple of things to look out for:
 
 1. Is any data parsed [multiple times, using different methods](https://about.gitlab.com/blog/2020/03/30/how-to-exploit-parser-differentials/)?   
 2. Is the data validated before or after unicode normalization?  
@@ -33,12 +33,15 @@ $ ping 0000000001.0000000002.0000000003.000000004
 
 There are many less-common IP address formats. Try them.
 
-
 ## JSON
 
 [Tell me more](https://labs.bishopfox.com/tech-blog/an-exploration-of-json-interoperability-vulnerabilities)
 
 Different parsers deal with special cases differently. Perhaps if an app uses one library for parsing and a different one for parsing+validation, you can bypass validation by duplicating keys?
+
+## Magic Bytes
+
+[List ordered by magic](https://www.garykessler.net/library/file_sigs.html)
 
 ## PDF
 
@@ -65,21 +68,15 @@ _Yes, officer_, that's a GIF I'm uploading. Oh, but it's also PHP code.
 
 If, for some reason, your payload is inspected in an actual real-life terminal \(-emulator\), you may want to try [Terminal Escape Injection](https://www.infosecmatter.com/terminal-escape-injection/). Include escapes in your payload such that a terminal will overwrite the sensitive text with benign-looking data.
 
-
 #### URL filtering
 
-[Example](https://twitter.com/YShahinzadeh/status/1250889458641141760)
-If a regex is used to split the host, perhaps URL parsing can be fooled. Real parsers take everything before an `@` as a username.
+[Example](https://twitter.com/YShahinzadeh/status/1250889458641141760) If a regex is used to split the host, perhaps URL parsing can be fooled. Real parsers take everything before an `@` as a username.
 
 ## Unicode
 
 ### Normalization
 
-[Tell me more](https://jlajara.gitlab.io/web/2020/02/19/Bypass_WAF_Unicode.html)
-[List](https://appcheck-ng.com/wp-content/uploads/unicode_normalization.html)
-[Tool](https://github.com/eldstal/strinvader)
-[Tool](https://github.com/JesseClarkND/abnormalizer)
-[Tool](https://spaceraccoon.github.io/unicollider/)
+[Tell me more](https://jlajara.gitlab.io/web/2020/02/19/Bypass_WAF_Unicode.html) [List](https://appcheck-ng.com/wp-content/uploads/unicode_normalization.html) [Tool](https://github.com/eldstal/strinvader) [Tool](https://github.com/JesseClarkND/abnormalizer) [Tool](https://spaceraccoon.github.io/unicollider/)
 
 ```text
 ① ② ③ ④ ⑤ ⑥ ⑦ ⑧ ⑨ ⑩ ⑪ ⑫ ⑬ ⑭ ⑮ ⑯ ⑰ ⑱ ⑲ ⑳ 
@@ -95,9 +92,7 @@ If a regex is used to split the host, perhaps URL parsing can be fooled. Real pa
 
 ## Unknown encodings
 
-[Tool](https://transformations.jobertabma.nl/) to auto-detect layered text transforms
-[Cyberchef](https://gchq.github.io/CyberChef/) is good for messing around with known chains
-[Haiti](https://github.com/noraj/haiti) identifies hash types
+[Tool](https://transformations.jobertabma.nl/) to auto-detect layered text transforms [Cyberchef](https://gchq.github.io/CyberChef/) is good for messing around with known chains [Haiti](https://github.com/noraj/haiti) identifies hash types
 
 ## URL
 
@@ -115,16 +110,13 @@ http:\domain.com
 
 Also try the tricks listed under IP address
 
-
 ## XML
 
 Different XML-based formats have their own cavities. Can the schema be bypassed to include dangerous elements?
 
 ### XXE
 
-[Tell me more](https://blog.cobalt.io/how-to-execute-an-xml-external-entity-injection-xxe-5d5c262d5b16)
-[Tell me even _more_](https://owasp.org/www-community/vulnerabilities/XML_External_Entity_%28XXE%29_Processing)
-[_You guessed it_](https://www.netsparker.com/blog/web-security/xxe-xml-external-entity-attacks/)  
+[Tell me more](https://blog.cobalt.io/how-to-execute-an-xml-external-entity-injection-xxe-5d5c262d5b16) [Tell me even _more_](https://owasp.org/www-community/vulnerabilities/XML_External_Entity_%28XXE%29_Processing) [_You guessed it_](https://www.netsparker.com/blog/web-security/xxe-xml-external-entity-attacks/)  
 [Tool](https://github.com/luisfontes19/xxexploiter)  
 [Work on it](https://gosecure.github.io/xxe-workshop/)
 

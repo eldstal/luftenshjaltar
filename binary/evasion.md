@@ -31,7 +31,7 @@ If your write primitive is limited, perhaps you can get away with only slightly 
 
 #### Massage ASLR first
 
-[Example](https://ctftime.org/writeup/27030)  
+[Example](https://ctftime.org/writeup/27030)
 
 Typically, the base of `libc` is not only random, but the lowest 12 bits are uneven. If you have a complete libc leak but a write primitive limited to a single byte, you might try to restart the application until you have a nice predictable third nibble.
 
@@ -52,7 +52,6 @@ It seems that the heap allocator likes to snug up against other allocated memory
 [Tell me more](https://0xabe.io/ctf/exploit/2016/04/24/BlazeCTF-dmail.html)
 
 If you've leaked libc, it contains a global variable pointing to the env data, which is on the stack.
-
 
 ## NX bit
 
@@ -81,7 +80,6 @@ Apparently, it's cool to reduce the amount of data hanging around in executable 
 [Tell me more](https://m101.github.io/binholic/2017/05/20/notes-on-abusing-exit-handlers.html)
 
 This is the function which calls `.fini` pointers, and is sometimes registered with the exit handlers \(see above\). If glibc has pointer guard enabled, this can serve as a good _known_ function pointer to calculate the guard value.
-
 
 ## Stack Cookie/Canary
 

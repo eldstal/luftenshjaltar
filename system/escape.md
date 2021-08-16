@@ -44,7 +44,6 @@ Perhaps the app even uses its own [custom URI scheme](https://twitter.com/zer0pw
 
 [Sandboxes](https://d0nut.medium.com/why-building-a-sandbox-in-pure-javascript-is-a-fools-errand-d425b77b2899)
 
-
 ## Python
 
 [Tell me more](https://book.hacktricks.xyz/misc/basic-python/bypass-python-sandboxes)

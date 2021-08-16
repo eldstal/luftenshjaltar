@@ -65,7 +65,6 @@ If you know what a binary is up to, you can set breakpoints at well-chosen locat
 [Snippets](https://github.com/HackOvert/GhidraSnippets) of ghidra-python  
 [API](https://ghidra.re/ghidra_docs/api/index.html) reference
 
-
 ## Fat binaries
 
 Windows PE can have a windows portion and a DOS portion in the same .exe. Usually the DOS part just prints a helpful message, but nothing prevents a narnia door to another world... [Rusty from justCTF2020](https://ctftime.org/task/14642) is an example of this in the wild.

@@ -23,7 +23,6 @@ if `exit()` is ever called, glibc invokes a set of functions called exit handler
 
 The system allocates stack memory for new pthreads using `mmap`. It has a somewhat predictable behavior, so you may be able to double-free so that the same memory gets allocated both as a stack space and as user data space. Write whatever you want on that stack and run free!
 
-
 ## Overwrite a function pointer in .got.plt
 
 [Tell me more](https://systemoverlord.com/2017/03/19/got-and-plt-for-pwning.html)
@@ -46,7 +45,6 @@ __free_hook
 ```
 
 They're just global variables with function pointers in them.
-
 
 ## Overwrite a return address on the stack
 
@@ -88,8 +86,8 @@ The opaque `FILE*` type points to an internal object which has a vtable-ish thin
 
 [Whitepaper](https://gsec.hitb.org/materials/sg2018/WHITEPAPERS/FILE%20Structures%20-%20Another%20Binary%20Exploitation%20Technique%20-%20An-Jie%20Yang.pdf) from GSEC 2018 \([Presentation](https://gsec.hitb.org/sg2018/sessions/file-structures-another-binary-exploitation-technique/)\) \([slides](https://www.slideshare.net/AngelBoy1/play-with-file-structure-yet-another-binary-exploit-technique)\)  
 [Tell me more](https://dhavalkapil.com/blogs/FILE-Structure-Exploitation/)  
-[And more](https://seb-sec.github.io/2020/04/29/file_exploitation.html)  
-  
+[And more](https://seb-sec.github.io/2020/04/29/file_exploitation.html)
+
 These techniques are designed to bypass the vtable validation introduced in glibc 2.24. Supposedly, they give control of `rip`, `rdi`, `rsi`, and `rdx`.
 
 ### Function pointers in `__IO_STR_FIELDS`

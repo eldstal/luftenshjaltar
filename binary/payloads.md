@@ -11,7 +11,6 @@ libc contains code to `execve("/bin/sh")` in several places. If you know the lib
 
 [Reverse Shell Generator](https://weibell.github.io/reverse-shell-generator/)
 
-
 ## ROP techniques
 
 [Exercises](https://ropemporium.com/)
@@ -56,7 +55,6 @@ The top of `.plt` is a stub which calls `dl-resolve`, and takes an index into th
 [Tool](https://docs.pwntools.com/en/stable/rop/srop.html)
 
 If you can push to the stack and execute syscall 15, you can control all the registers at once. Neat.
-
 
 ## Syscall cobbling
 
