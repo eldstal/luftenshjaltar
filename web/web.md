@@ -65,6 +65,18 @@ If a JWT uses RS256, the backend can be tricked into validating with HS256 inste
 
 Unvalidated user input leaks into the early parts of a HTTP response. The attacker can inject CRLF, allowing them to control the rest of the response, including additional headers and content.
 
+## HTTP Request Smuggling
+
+[Sweet Infographic](https://securityzines.com/comics/hrs.html)  
+  
+A proxy in front of the server merges multiple incoming requests into a single connection to the backend server.
+
+A malicious HTTP request has both a short `Content-Length` header \(which is proper\) and an additional `Transfer-Encoding: Chunked` header \(which is ignored by the proxy\). It is immediately followed by an authenticated request from a legitimate user.
+
+The proxy concatenates the requests and passes them on to the backend server, still via HTTP. The server parses the malicious request as `Transfer-Encoding: Chunked` and ignores the  `Content-Length`. As a result, the malicious result is parsed short, and the tail end of its data is interpreted by the server as the start of the next request.
+
+As a result, the second request handled by the server is malformed. Malicious control over the HTTP command and headers, but includes the headers of the legitimate request as well. Oops. 
+
 ## 40x bypassing
 
 * [4-ZERO-3](https://github.com/Dheerajmadhukar/4-ZERO-3)
