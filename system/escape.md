@@ -40,6 +40,10 @@ fl[a-z]g.txt
 
 Perhaps the app even uses its own [custom URI scheme](https://twitter.com/zer0pwn/status/1325581291060826112)?
 
+## git
+
+[git-shell](https://insinuator.net/2017/05/git-shell-bypass-by-abusing-less-cve-2017-8386/) tries to be restrictive server-side, but might not be.
+
 ## Javascript
 
 [Sandboxes](https://d0nut.medium.com/why-building-a-sandbox-in-pure-javascript-is-a-fools-errand-d425b77b2899)
@@ -56,6 +60,17 @@ Here's a pretty simple one:
 import statistics
 statistics.random._os._execvpe("/bin/sh", [], {})
 ```
+
+### Forbidden strings
+
+If there's some sort of word blocklist, try unicode:
+
+```python
+>>> 𝖕𝖗𝖎𝖓𝖙(1)
+1
+```
+
+Python runs it just fine.
 
 ### Pickle
 
