@@ -8,10 +8,11 @@ TODO: Learn about tcache poisoning, which is related to this.
 
 ## Integer Overflows and `malloc()`
 
-[Blog](https://undeadly.org/cgi?action=article&sid=20060330071917)  
+[Tell me more](https://undeadly.org/cgi?action=article&sid=20060330071917)
+
 There's a pretty common pattern used to allocate an array of `n` objects of type `T`: `malloc(sizeof(T) * n)` 
 
-A _very_ large `n` can cause an overflow of the `size_t` passed to `malloc()`. An attacker can cause a smaller memory area to be allocated, leading to overflows when the application tries to use that shiny new buffer.
+A _very_ large `n` can cause an overflow of the `size_t` passed to `malloc()`. An attacker who controls `n` can cause a smaller memory area to be allocated, leading to a buffer overflow when the application tries to use that shiny new buffer.
 
 ## Attacks
 
