@@ -1,3 +1,7 @@
+---
+description: These are various ways to gain control of the instruction pointer.
+---
+
 # Vectors
 
 ## Function pointers used by `_call_tls_dtors`

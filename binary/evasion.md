@@ -1,3 +1,7 @@
+---
+description: Evasion and countermeasures to various exploit mitigation mechanisms.
+---
+
 # Evasion
 
 ## ASLR
@@ -61,7 +65,7 @@ NX binaries never have Write and eXecute permissions on the same memory page. If
 
 ### Invoke `_dl_make_stack_executable`
 
-This function is part of the GNU dynamic linker, but linked into some binaries for some weird reason. Maybe only in statically linked binaries? Does exactly what it looks like.
+This function is part of the GNU dynamic linker, but linked into some binaries for some weird reason. Maybe only in statically linked binaries? Does exactly what it looks like, and it's a wonderful way to get your shellcode running.
 
 ### ROP
 
