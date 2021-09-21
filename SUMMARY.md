@@ -28,6 +28,7 @@
 
 * [Escape](system/escape.md)
 * [Escalation](system/escalation.md)
+* [Shells](system/shells.md)
 
 ## Crypto
 
