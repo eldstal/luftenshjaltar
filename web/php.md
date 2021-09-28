@@ -1,5 +1,10 @@
 # PHP
 
+## LFI to RCE
+
+If you have access to a `phpinfo()` page, you may be able to [use it to upload](https://www.fatalerrors.org/a/php-local-file-inclusion-rce-with-phpinfo.html) a file  
+An LFI in the `<?php` context will suddenly become an RCE!
+
 ## Parameter Pollution
 
 [Source](https://twitter.com/PaulosYibelo/status/1425731971188248581?s=19)  
