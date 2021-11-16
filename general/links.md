@@ -4,14 +4,15 @@ A lot of these were found [here](https://github.com/collections/ctf-cybersec-res
 
 ## Other notebooks
 
-[TechNote](https://www.lazenca.net/display/TEC/TechNote) \(Korean\)  
-[Hacktricks](https://book.hacktricks.xyz/)  
-[Kathan19](https://kathan19.gitbook.io/howtohunt/)  
+* [TechNote](https://www.lazenca.net/display/TEC/TechNote) (Korean)
+* [Hacktricks](https://book.hacktricks.xyz)
+* [0xFFsec](https://0xffsec.com/handbook/)
+* [Kathan19](https://kathan19.gitbook.io/howtohunt/)\
 
 
 ## Open services
 
-[Hacktricks](https://book.hacktricks.xyz/) contains a lot of information about pentesting specific protocols, as well as other gems.
+[Hacktricks](https://book.hacktricks.xyz) contains a lot of information about pentesting specific protocols, as well as other gems.
 
 ## SSTI, SQLI, LFI, RFI, ...
 
@@ -36,4 +37,3 @@ Anywhere user input is accepted, there's a possibility for format trickery.
 ## Windows and DOS
 
 [Docs and such](http://bytepointer.com/resources/index.htm) for various microsoft platforms
-
